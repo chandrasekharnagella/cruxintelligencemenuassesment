@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  /* color:#ffff */
+}
+
+.main {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  /* background-color:rgb(42, 41, 41); */
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+  /* position:absolute; */
+  margin-top: 5rem;
+}
+
+.sidebar_item {
+  padding: 0.75rem;
+  transition: background-color 0.15s;
+  display: block;
+}
+.sidebar_item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar_title {
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: space-between;
+}
+.sidebar_title span i {
+  display: inline-block;
+  width: 1.5rem;
+}
+.sidebar_title .toggle-btn {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.sidebar_item.open > .sidebar_title .toggle-btn {
+  transform: rotate(180deg);
+}
+
+.sidebar_content {
+  padding-top: 0.25rem;
+  height: 0;
+  overflow: hidden;
+}
+.sidebar_item.open > .sidebar_content {
+  height: auto;
+}
+
+.logo {
+  width: 18%;
+  height: 4rem;
+  border-bottom: 0.1rem solid lightgray;
+  position: fixed;
+}
+ul {
+  list-style-type: none;
+}
+.logo_design {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  margin-left: 2rem;
+  margin-top: 0.8rem;
+  /* // border:1px solid gray; */
+  position: absolute;
+}
+
+.logo_design li:first-child {
+  width: 1rem;
+  height: 1.2rem;
+  background-color: orange;
+  border-radius: 100px 0px 100px 0px;
+}
+
+.logo_design li:nth-child(2) {
+  width: 1rem;
+  height: 1.2rem;
+  margin-left: 1.5rem;
+  background-color: red;
+  margin-top: -1.15rem;
+  border-radius: 0px 100px 0px 100px;
+}
+
+.logo_design li:nth-child(3) {
+  width: 1rem;
+  height: 1.2rem;
+  background-color: blue;
+  border-radius: 0px 100px 0px 100px;
+  margin-left: 1rem;
+  margin-top: 0.2rem;
+}
+
+.logo h3 {
+  text-align: center;
+  line-height: 4rem;
+}
+
+.admit_btn {
+  width: 17%;
+  height: 3rem;
+  margin-top: 28.7rem; 
+  position: fixed;
+  border-color: lightgray;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.admit_btn span {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid gray;
+  border-radius: 100%;
+  font-size: 18px;
+  position: absolute;
+  margin-left: -2.5rem;
+  margin-top: -0.5rem;
+  line-height: 2rem;
+}
+.admit_right {
+  width: 15rem;
+  height: 12.6rem;
+  background-color: white;
+  z-index: 1;
+  margin-top: 16.4rem;
+  position: absolute;
+  margin-left: 15.7rem;
+  border: 1px solid gray;
+  position: fixed;
+}
+.admit_right button {
+  border: none;
+  padding: 1rem;
+  background: none;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.container {
+  color: black;
+}
+
+.header_title {
+  width: 78%;
+  height: 3.5rem;
+  /* background-color:gray; */
+  position: fixed;
+  margin-left: 18rem;
+}
+.header_title input {
+  width: 95%;
+  height: 2.4rem;
+  margin: 0.52rem 1.8rem;
+  border-radius: 5px;
+
+  padding-left: 1rem;
+}
+.header_title button {
+  width: 5em;
+  height: 2rem;
+  cursor: pointer;
+  margin-left: -6.2rem;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.section_info {
+  width: 77.6%;
+  background-color: lightgray;
+  margin-left: 20rem;
+  margin-top: 5rem;
+  position: absolute;
+  z-index: -10;
+  border-radius: 5px;
+}
